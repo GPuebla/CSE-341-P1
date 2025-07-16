@@ -1,4 +1,4 @@
-const mongodb = require('../database/db');
+const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
 
