@@ -1,8 +1,32 @@
-const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('✅ Conectado a MongoDB'))
-.catch(err => console.error('❌ Error de conexión:', err));
+const { MongoClient } = require('mongodb');
+
+let database;
+
+const initDb = (callback) => {
+  if (database) {
+    console.log('Db is already initialized!');
+    return callback(null, database);
+  }
+
+  MongoClient.connect(process.env.MONGODB_URL, { useUnifiedTopology: true })
+    .then((client) => {
+      database = client.db();
+      callback(null, database);
+    })
+    .catch((err) => callback(err));
+};
+
+const getDatabase = () => {
+  if (!database) {
+    throw new Error('Database not initialized');
+  }
+  return database;
+};
+
+module.exports = {
+  initDb,
+  getDatabase
+};

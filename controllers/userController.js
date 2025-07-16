@@ -1,14 +1,24 @@
-const user = {}
-
-user.getUser = async function(req, res) {
-  res.json({ message: 'Lista de usuarios' });
-
-}
+const mongodb = require('../database/db');
+const ObjectId = require('mongodb').ObjectId;
 
 
-// user.createUser = async function(req, res) { ... }
-// user.getUserById = async function(req, res) { ... }
-// user.updateUser = async function(req, res) { ... }
-// user.deleteUser = async function(req, res) { ... }
+const getAll = async (req, res) => {
+  const result = await mongodb.getDatabase().collection('users').find(); 
+  result.toArray().then((users) => {
+    res.setHeader('Content-Type','application/json');
+    res.status(200).json(users);
+  });
+};
 
-module.exports = user;
+
+const getSingle = async (req, res) => {
+  const userId = new ObjectId (req.params.id);
+  const result = await mongodb.getDatabase().collection('users').find({ _id: userId });
+  result.toArray().then((users) => {
+    res.setHeader('Content-Type', 'application/json'); 
+    res.status(200).json(users[0]);
+  });
+};
+
+
+module.exports = {getAll,getSingle};
