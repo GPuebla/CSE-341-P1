@@ -16,7 +16,7 @@ Content-Type: application/json
 {
   "email": "test4@test.com",
   "username": "test4@test.com",
-  "name": "Hello4",
+  "name": "Hello6",
   "ipaddress": "94.121.16.56"
 }
 
