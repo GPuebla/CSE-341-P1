@@ -9,6 +9,16 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
+app.use((req,res,next)=>{
+  res.setHeader('Access-Control-Allow-Origen', '*');
+  res.setHeader(
+    'Access-Control-Allow-Header',
+    'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
+  );
+  res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,DELETE,OPTIONS');
+  next();
+});
+
 app.use('/', routes);
 
 const PORT = process.env.PORT || 3000;
