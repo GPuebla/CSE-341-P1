@@ -46,6 +46,7 @@ const createUser = async (req, res) => {
 
 const updateUser = async (req, res) => {
   //#swagger.tags=['Users']
+  console.log('req.body completo:', req.body);
   try {
     const userId = new ObjectId(req.params.id);
     const user = {
@@ -70,7 +71,7 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
   //#swagger.tags=['Users']
   const userId = new ObjectId (req.params.id);
-  const response = await mongodb.getDatabase().collection('users').remove({ _id: userId }, true); 
+  const response = await mongodb.getDatabase().collection('users').deleteOne({ _id: userId }, true); 
   
   if (response.deletedCount > 0) {
     res.status(204).send();

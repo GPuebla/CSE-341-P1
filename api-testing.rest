@@ -20,7 +20,23 @@ Content-Type: application/json
   "ipaddress": "94.121.16.56"
 }
 
-### RENDER
+### Update user
+PUT http://localhost:3000/users/68803610add67c9e0294ae79
+Content-Type: application/json
+
+{
+  "email": "test12@test.com",
+  "username": "test12@test.com",
+  "name": "Hello12",
+  "ipaddress": "94.121.16.012"
+}
+
+### Delete user
+DELETE http://localhost:3000/users/687928bc2956bbeab0d368b0
+Content-Type: application/json
+
+
+### RENDER ////////////////////////////////////////////////////////////////////////////////////////////////
 
 ### Get the message: Hello World!
 GET https://cse-341-project1-7a6g.onrender.com
@@ -30,3 +46,29 @@ GET https://cse-341-project1-7a6g.onrender.com/users
 
 ### Get user by ID
 GET https://cse-341-project1-7a6g.onrender.com/users/66feda6634acaf25fc843242
+
+### Create a new user
+POST https://cse-341-project1-7a6g.onrender.com/users
+Content-Type: application/json
+
+{
+  "email": "test8@test.com",
+  "username": "test8@test.com",
+  "name": "Hello8",
+  "ipaddress": "94.121.16.08"
+}
+
+### Update user
+PUT https://cse-341-project1-7a6g.onrender.com/users/68803610add67c9e0294ae79
+Content-Type: application/json
+
+{
+  "email": "test10@test.com",
+  "username": "test10@test.com",
+  "name": "Hello10",
+  "ipaddress": "94.121.16.010"
+}
+
+### Delete user
+DELETE https://cse-341-project1-7a6g.onrender.com/users/68803610add67c9e0294ae79
+Content-Type: application/json
