@@ -52,21 +52,21 @@ POST https://cse-341-project1-7a6g.onrender.com/users
 Content-Type: application/json
 
 {
-  "email": "test8@test.com",
-  "username": "test8@test.com",
-  "name": "Hello8",
-  "ipaddress": "94.121.16.08"
+  "email": "test20@test.com",
+  "username": "test20@test.com",
+  "name": "Hello20",
+  "ipaddress": "94.121.16.020"
 }
 
 ### Update user
-PUT https://cse-341-project1-7a6g.onrender.com/users/68803610add67c9e0294ae79
+PUT https://cse-341-project1-7a6g.onrender.com/users/6882b644e1fee37e3cc7acba
 Content-Type: application/json
 
 {
-  "email": "test10@test.com",
-  "username": "test10@test.com",
-  "name": "Hello10",
-  "ipaddress": "94.121.16.010"
+  "email": "test21*@test.com",
+  "username": "test21*@test.com",
+  "name": "Hello21*",
+  "ipaddress": "94.121.16.021*"
 }
 
 ### Delete user
