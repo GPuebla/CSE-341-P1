@@ -68,25 +68,31 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "description": "ID del usuario"
           },
           {
             "name": "body",
             "in": "body",
+            "required": true,
             "schema": {
               "type": "object",
               "properties": {
                 "email": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "test@test.com"
                 },
                 "username": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "usuarioTest"
                 },
                 "name": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "Nombre completo"
                 },
                 "ipaddress": {
-                  "example": "any"
+                  "type": "string",
+                  "example": "192.168.1.1"
                 }
               }
             }

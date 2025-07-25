@@ -59,7 +59,7 @@ Content-Type: application/json
 }
 
 ### Update user
-PUT https://cse-341-project1-7a6g.onrender.com/users/68836bd51efcd0472451f52a
+PUT https://cse-341-project1-7a6g.onrender.com/users/68837850021156097cad7b0c
 Content-Type: application/json
 
 {

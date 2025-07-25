@@ -45,17 +45,20 @@ const createUser = async (req, res) => {
 
 
 const updateUser = async (req, res) => {
-  //#swagger.tags=['Users']
-  //#swagger.parameters['body'] = {
-  //    in: 'body',
-  //    required: true,
-  //    schema: {
-  //        email: 'test@test.com',
-  //        username: 'usuarioTest',
-  //        name: 'Nombre completo',
-  //        ipaddress: '192.168.1.1'
-  //    }
-  // }
+   /*
+    #swagger.tags = ['Users']
+    #swagger.parameters['id'] = { description: 'ID del usuario' }
+    #swagger.parameters['body'] = {
+        in: 'body',
+        required: true,
+        schema: {
+            email: 'test@test.com',
+            username: 'usuarioTest',
+            name: 'Nombre completo',
+            ipaddress: '192.168.1.1'
+        }
+    }
+  */
   console.log('req.body:', req.body);
   try {
     const userId = new ObjectId(req.params.id);
