@@ -21,18 +21,18 @@ Content-Type: application/json
 }
 
 ### Update user
-PUT http://localhost:3000/users/68803610add67c9e0294ae79
+PUT http://localhost:3000/users/68836bd51efcd0472451f52a
 Content-Type: application/json
 
 {
-  "email": "test12@test.com",
-  "username": "test12@test.com",
-  "name": "Hello12",
-  "ipaddress": "94.121.16.012"
+  "email": "test1@test.com",
+  "username": "test1@test.com",
+  "name": "Hello1",
+  "ipaddress": "94.121.16.01"
 }
 
 ### Delete user
-DELETE http://localhost:3000/users/687928bc2956bbeab0d368b0
+DELETE http://localhost:3000/users/68835d7d2cb32be7339ea911
 Content-Type: application/json
 
 
@@ -59,7 +59,7 @@ Content-Type: application/json
 }
 
 ### Update user
-PUT https://cse-341-project1-7a6g.onrender.com/users/6882b644e1fee37e3cc7acba
+PUT https://cse-341-project1-7a6g.onrender.com/users/688364cb97caedafe2c331eb
 Content-Type: application/json
 
 {
