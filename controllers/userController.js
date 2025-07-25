@@ -62,14 +62,24 @@ const updateUser = async (req, res) => {
   console.log('req.body:', req.body);
   try {
     const userId = new ObjectId(req.params.id);
-    const user = {
+    // const user = {
+    //   email: req.body.email,
+    //   username: req.body.username,
+    //   name: req.body.name,
+    //   ipaddress: req.body.ipaddress
+    // };
+
+   const response = await mongodb.getDatabase().collection('users').updateOne(
+  { _id: userId },
+  {
+    $set: {
       email: req.body.email,
       username: req.body.username,
       name: req.body.name,
       ipaddress: req.body.ipaddress
-    };
-
-   const response = await mongodb.getDatabase().collection('users').replaceOne({ _id: userId }, user);
+    }
+  }
+);
    
     if (response.modifiedCount > 0) {
       res.status(204).send();
